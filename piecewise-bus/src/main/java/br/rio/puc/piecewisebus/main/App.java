@@ -5,7 +5,6 @@ import java.sql.SQLException;
 import java.util.List;
 
 import br.rio.puc.piecewisebus.dao.DAO;
-import br.rio.puc.piecewisebus.model.Aresta;
 import br.rio.puc.piecewisebus.model.Elements;
 import br.rio.puc.piecewisebus.model.Grafo;
 import br.rio.puc.piecewisebus.model.Vertice;

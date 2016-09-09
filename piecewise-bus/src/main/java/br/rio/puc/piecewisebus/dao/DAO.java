@@ -37,6 +37,8 @@ public class DAO {
 			}
 
 		} catch (SQLException e) {
+			e.printStackTrace();
+			System.err.print(e.getMessage());
 			System.err.print("[ERRO] UM ERRO OCORREU QUANDO OS ELEMENTOS ESTAVAM SENDO CAPTURADOS");
 			System.err.print(e.getMessage());
 		}
