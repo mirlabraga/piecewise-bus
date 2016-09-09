@@ -25,10 +25,10 @@ public class App {
 
 		for (Elements element : elements) {
 
-			Vertice source = grafo.addVertice(element.getSource());
-			Vertice target = grafo.addVertice(element.getTarget());
+			Vertice source = grafo.addVertice(element.getSource().trim());
+			Vertice target = grafo.addVertice(element.getTarget().trim());
 			
-			grafo.addAresta(source, target, element.getEdge(), element.getDistance());
+			grafo.addAresta(source, target, element.getEdge().trim(), element.getDistance());
 			
 			System.out.println(grafo);
 		}

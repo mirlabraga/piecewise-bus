@@ -1,21 +1,23 @@
 package br.rio.puc.piecewisebus.model;
 
 import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Grafo {
 
-	private List<Vertice> vertices;
-	private List<Aresta> arestas;
+	private Set<Vertice> vertices;
+	private Set<Aresta> arestas;
 
 	public Grafo() {
-		vertices = new ArrayList<Vertice>();
-		arestas = new ArrayList<Aresta>();
+		vertices = new HashSet<Vertice>();
+		arestas = new HashSet<Aresta>();
 	}
 
 	public Vertice addVertice(String nome) {
 
 		System.out.println("TOTAL DE VÉRTICES:" + vertices.size());
+		System.out.println("CRIANDO O VERTICE:" + nome);
 		Vertice vertice = new Vertice(nome);
 
 		if(!vertices.contains(vertice)) {

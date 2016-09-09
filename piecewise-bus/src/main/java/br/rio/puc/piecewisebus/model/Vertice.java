@@ -32,13 +32,27 @@ public class Vertice {
 		}
 		return null;
 	}
-
-	public boolean equals(Object object) {
-		if ((object instanceof Vertice) && ((Vertice) object).getNome() == this.nome)
-			return true;
-		return false;
-	}
 	
+	 @Override
+	 public boolean  equals (Object object) {
+	     boolean result = false;
+	     if (object == null || object.getClass() != getClass()) {
+	         result = false;
+	     } else {
+	    	 Vertice vertice = (Vertice) object;
+	         if (this.nome.equals(vertice.getNome())) {
+	             result = true;
+	         }
+	     }
+	     return result;
+	 }
+
+
+	@Override
+	public int hashCode() {
+		return getNome().length() * 8;
+	}
+
 	@Override
 	public String toString() {
 		return this.nome;
