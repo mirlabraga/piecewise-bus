@@ -22,7 +22,7 @@ public class DAO {
 		try {
 
 			PreparedStatement sql = connetion
-					.prepareStatement("SELECT source, target, road_id, cost FROM grafo");
+					.prepareStatement("SELECT source, target, road_id, cost FROM grafoteste");
 			rs = sql.executeQuery();
 
 			while (rs.next()) {
